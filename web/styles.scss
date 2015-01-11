@@ -1,5 +1,12 @@
+$font-headers: 'Molengo', sans-serif;
+$font-code: 'Anonymous Pro', monospace;
+
+$link-color: #9b9f90;
+$code-background-color: #f0f4e6;
+$text-color: #505050;
+
 body {
-    color: #505050;
+    color: $text-color;
 }
 
 p {
@@ -8,12 +15,12 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Molengo', sans-serif;
+    font-family: $font-headers
 }
 
 code {
-    font-family: 'Anonymous Pro', monospace;
-    background-color: #f0f4e6;
+    font-family: $font-code;
+    background-color: $code-background-color;
 }
 
 pre {
@@ -23,11 +30,10 @@ pre {
 pre > code {
     display: inline-block;
     width: 100%;
-
 }
 
 a, .lastname {
-    color: #9b9f90;
+    color: $link-color;
 }
 
 .container {

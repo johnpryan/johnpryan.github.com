@@ -1,0 +1,19 @@
+name: johnpryan_github_site
+description: a blog using flare
+dev_dependencies:
+  flare: any
+  sass: any
+transformers:
+- sass
+#- flare/metadata_extractor
+#- flare/metadata_transformer
+#- flare/markdown_transformer
+#- flare/posts_indexer:
+#    root: web/posts
+#- flare/posts_transformer:
+#    root: web/posts
+#    layout: web/_posts_layout.tmpl.html
+#- flare/partials_transformer
+#- flare/metadata_aggregator
+#- flare/mustache_transformer
+#- flare/cleanup_transformer
