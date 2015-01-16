@@ -1,68 +1,84 @@
 $font-headers: 'Molengo', sans-serif;
 $font-code: 'Anonymous Pro', monospace;
+$font-normal: 'PT Serif', serif;
 
 $link-color: #9b9f90;
 $code-background-color: #f0f4e6;
 $text-color: #505050;
 
+::selection {background: #dbffc8; } //TODO: pick a color matching the colorscheme
+
 body {
-    color: $text-color;
+  color: $text-color;
+}
+
+* {
+  font-family: $font-normal;
 }
 
 p {
-    font-family: 'PT Serif', serif;
-    font-size: 14px;
+  font-family: $font-normal;
+  font-size: 14px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: $font-headers
+  font-family: $font-headers
+}
+
+img {
+  max-width:85%;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
 }
 
 code {
-    font-family: $font-code;
-    background-color: $code-background-color;
+  font-family: $font-code;
 }
 
 pre {
-    width: inherit;
+  width: inherit;
+  padding: 12.5px;
+  background-color: $code-background-color;
 }
 
 pre > code {
-    display: inline-block;
-    width: 100%;
+  display: inline-block;
+  width: 100%;
 }
 
 a, .lastname {
-    color: $link-color;
+  font-family: $font-headers;
+  color: $link-color;
 }
 
 .container {
-    max-width:600px;
-    margin-left: auto;
-    margin-right: auto;
+  max-width:600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header {
-    max-width:600px;
-    margin-left:auto;
-    margin-right:auto;
+  max-width:600px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .header-left > h1{
-    display: inline;
+  display: inline;
 }
 
 .header-right > a{
-    display: inline;
+  display: inline;
 }
 
 .header-left {
-    display:inline;
+  display:inline;
 }
 
 .header-right {
-    display: inline-block;
-    position: relative;
-    margin-top: 5px;
-    float:right;
+  display: inline-block;
+  position: relative;
+  margin-top: 5px;
+  float:right;
 }
