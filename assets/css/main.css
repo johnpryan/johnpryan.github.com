@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Inconsolata|Roboto|Roboto+Slab");
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text");
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600");
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr,
 acronym, address, cite, code, figure, img, ins, q, s, samp, small, strike, sub,
 sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
@@ -24,18 +25,17 @@ article h1, article h2, article h3, article h4, article h5, article h6 {
   margin-bottom: 0.5em; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Georgia, serif;
+  font-family: "Crimson Text", serif;
   margin-bottom: 8px; }
 
 a {
   color: #4670d8;
-  font-family: Georgia, serif;
+  font-family: "Crimson Text", serif;
   text-decoration: none;
   padding: 2px 4px 2px 4px;
   border-radius: 4px; }
   a:hover {
-    background-color: rgba(129, 132, 206, 0.31);
-    text-decoration: none; }
+    text-decoration: underline; }
 
 img {
   max-width: 90%;
@@ -51,13 +51,14 @@ p code {
   margin-right: 2px; }
 
 code {
-  font-family: "Inconsolata", Menlo, Courier, monospace;
+  font-family: "Source Code Pro", Menlo, Courier, monospace;
+  font-weight: 400;
   font-size: 0.9em; }
 
 pre {
   overflow: scroll;
   padding: 12px;
-  background: #25272f;
+  background: #faf8f5;
   color: white;
   border-radius: 8px;
   margin-bottom: 8px; }
@@ -82,16 +83,20 @@ li {
   margin-top: 8px; }
 
 nav {
-  font-family: "Helvetica Neue", Arial, sans-serif; }
+  font-family: "Crimson Text", serif; }
   nav ul {
-    padding-left: 24px;
+    padding-left: 0px;
     list-style: none; }
+  nav li {
+    margin-top: 0px; }
+  nav a {
+    color: #b3bbd1; }
 
 .post_back {
-  margin-bottom: 24px; }
+  margin-bottom: 8px; }
 
 .post_date {
-  font-family: Georgia, serif;
+  font-family: "Crimson Text", serif;
   color: #666666;
   display: inline-block; }
   .post_date p {
@@ -106,17 +111,17 @@ nav {
     display: table-cell;
     min-width: 96px; }
 
-.footer {
-  font-family: Georgia, serif;
+.copyright {
+  font-family: "Crimson Text", serif;
   margin-bottom: 32px;
-  font-size: 0.8em; }
+  color: silver; }
 
 article {
   background-color: white;
   box-shadow: 0px 0px 15px 1px #bbbbbb;
   padding: 64px;
   overflow: hidden;
-  font-family: Georgia, serif; }
+  font-family: "Crimson Text", serif; }
 
 blockquote {
   padding-left: 24px;
@@ -125,7 +130,7 @@ blockquote {
     color: #737373; }
 
 .date {
-  font-family: Georgia, serif;
+  font-family: "Crimson Text", serif;
   font-size: 0.8em;
   color: #666666;
   margin-left: 8px; }
@@ -140,7 +145,7 @@ table {
     border-top: 1px solid #ccc;
     border-spacing: 0px; }
   table td, table th {
-    font: Georgia, serif;
+    font: "Crimson Text", serif;
     padding: 6px 13px;
     border: 1px solid #ccc; }
   table thead {
@@ -156,20 +161,29 @@ article, nav {
   margin-bottom: 8px; }
 
 .column {
-  max-width: 1280px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding: 16px;
-  display: flex; }
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: "spacer article nav";
+  grid-gap: 10px; }
   .column article {
-    flex: 1;
+    grid-area: article;
     max-width: 640px; }
   .column nav {
+    grid-area: nav;
     padding: 16px;
-    width: 320px; }
+    margin-left: 0px; }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 900px) {
   .column {
-    display: block; }
+    grid-template-columns: 1fr;
+    grid-template-areas: "article" "nav"; }
 
   article {
-    padding: 24px; } }
+    max-width: 640px;
+    padding: 32px;
+    margin-left: auto;
+    margin-right: auto; } }
